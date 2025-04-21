@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Full-Screen Gradient Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/purple_overlay_gradient" />
+
+    <!-- Floating Circular Logo -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logoImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:contentDescription="App Logo"
+        android:alpha="0.95"
+        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FCO CCS Student Portal"
+        android:textColor="#EAD8FF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_below="@id/logoImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- Subtitle/Tagline -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your gateway to student services"
+        android:textColor="#B3A9D6"
+        android:textSize="16sp"
+        android:layout_below="@id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Glass-Effect Card for Login/Signup Buttons -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitleText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_glass_card"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="35dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_neon_purple"
+                android:layout_marginTop="10dp"
+                android:elevation="6dp" />
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Sign Up"
+                android:textColor="#162E2E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_glow_outline"
+                android:elevation="6dp" />
+
+
+            <!-- Or Social Media Login -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or login with"
+                android:textColor="#31293A"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true" />
+
+            <!-- Social Media Buttons (Google, Facebook, etc.) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/google"
+                    android:contentDescription="Google Login"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="centerCrop" />
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/fb"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Facebook Login"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

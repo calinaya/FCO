@@ -1,0 +1,108 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".message"
+    android:background="@drawable/purple_overlay_gradient">
+
+    <!-- Background Image (Design) -->
+    <ImageView
+        android:id="@+id/backgroundDesign"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:alpha="0.15" /> <!-- Adjust transparency -->
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/header_background">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/back1"
+                app:tint="#FFFFFF"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Scrollable Messages -->
+        <ScrollView
+            android:id="@+id/messageScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:importantForAccessibility="no"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/messageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <!-- Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:hint="Type a message..."
+                android:layout_marginLeft="10dp"
+                android:minLines="1"
+                android:maxLines="6"
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="12dp"
+                android:background="@drawable/input_background"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:scrollbars="vertical" />
+
+            <ImageButton
+                android:id="@+id/sendMessageBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/send_button_background"
+                android:src="@drawable/send"
+                app:tint="#FFFFFF"
+                android:contentDescription="Send Message" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

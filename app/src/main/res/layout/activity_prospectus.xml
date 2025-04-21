@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBFB"
+    android:padding="16dp"
+    tools:context=".prospectus">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="@drawable/header_background">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back1"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📘 Prospectus"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- PDF Viewer -->
+    <FrameLayout
+        android:id="@+id/pdfContainer"
+        android:layout_width="340dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/event_card_style"
+        android:elevation="6dp" />
+
+    <!-- Download Button -->
+    <Button
+        android:id="@+id/downloadProspectusBtn"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="⬇️ Download Prospectus"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_style" />
+</LinearLayout>

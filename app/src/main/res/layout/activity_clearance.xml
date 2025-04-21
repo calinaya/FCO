@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clearance"
+    android:background="#FDFBFB">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/header_background">
+
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back1"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="12dp" />
+
+
+        <TextView
+            android:id="@+id/clearanceHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clearance"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/pdfContainer"
+        android:layout_width="340dp"
+        android:layout_height="550dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/headerContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/event_card_style"
+        android:elevation="6dp" />
+
+
+    <Button
+        android:id="@+id/downloadClearanceBtn"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="⬇️ Download Clearance"
+        android:layout_gravity="center"
+        android:layout_below="@+id/pdfContainer"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_style" />
+
+</RelativeLayout>

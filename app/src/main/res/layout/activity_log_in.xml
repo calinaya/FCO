@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn"
+    android:background="@drawable/purple_overlay_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Floating Circular Logo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/logoImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            android:contentDescription="App Logo"
+            android:alpha="0.95"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FCO CCS Student Portal"
+            android:textColor="#EAD8FF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_below="@id/logoImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your gateway to student services"
+            android:textColor="#B3A9D6"
+            android:textSize="16sp"
+            android:layout_below="@id/welcomeText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
+
+        <!-- Glass Login Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeText"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_glass_card"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- Student ID -->
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Student ID or Email"
+                    android:textColor="#0D0909"
+                    android:textColorHint="#393440"
+                    android:drawableStart="@drawable/baseline_account_circle_24"
+                    android:drawablePadding="12dp"
+                    android:background="@drawable/edittext_glass_bg"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Password -->
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Password"
+                    android:textColor="#0D0909"
+                    android:textColorHint="#393440"
+                    android:drawableStart="@drawable/pass"
+                    android:drawablePadding="12dp"
+                    android:background="@drawable/edittext_glass_bg"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="24dp" />
+
+                <CheckBox
+                    android:id="@+id/cbShowPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Password"
+                    android:textColor="#B3A9D6"
+                    android:layout_marginTop="-20dp"
+                    android:layout_gravity="start" />
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Login"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_neon_purple"
+                    />
+
+                <!-- Forgot Password -->
+                <TextView
+                    android:id="@+id/forgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#18131D"
+                    android:layout_gravity="center"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/footerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardView"
+            android:layout_centerHorizontal="true"
+            android:text="© FCO-CCS 2025"
+            android:textColor="#D7BAFF"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:layout_marginBottom="30dp"/>
+
+    </RelativeLayout>
+</ScrollView>
