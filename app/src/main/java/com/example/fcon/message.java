@@ -33,5 +33,13 @@ public class message extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(message.this, fco_homepage.class);
+                startActivity(b);
+            }
+        });
     }
 }

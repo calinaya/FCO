@@ -33,5 +33,13 @@ public class event_details extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(event_details.this, fco_homepage.class);
+                startActivity(b);
+            }
+        });
     }
 }

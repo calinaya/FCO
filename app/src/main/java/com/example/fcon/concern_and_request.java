@@ -32,5 +32,13 @@ public class concern_and_request extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(concern_and_request.this, fco_homepage.class);
+                startActivity(b);
+            }
+        });
     }
 }

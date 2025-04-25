@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:background="@drawable/purple_overlay_gradient"
+    tools:context=".feedback">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/header_background"
+        android:padding="16dp"
+        android:id="@+id/header">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back1"
+            app:tint="#FFFFFF"
+            android:layout_marginLeft="-5dp"
+            android:layout_alignParentStart="true"/>
+
+
+        <TextView
+            android:id="@+id/feedbackTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Feedback"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-35dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/concernsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="13dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/header"
+        android:layout_marginTop="32dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/concernsRecyclerView"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/concernsTitle"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_recyclerview_style"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No feedback available"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/concernsRecyclerView"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Concerns Item Title -->
+    <TextView
+        android:id="@+id/concernItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Title"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@id/concernsRecyclerView"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+</RelativeLayout>

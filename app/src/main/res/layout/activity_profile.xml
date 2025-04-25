@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="100dp">
 
-            <!-- Profile Picture -->
+
             <ImageView
                 android:id="@+id/profile_image"
                 android:layout_width="150dp"
@@ -31,7 +31,7 @@
                 android:scaleType="centerCrop"
                 android:layout_marginTop="20dp" />
 
-            <!-- Section Title -->
+
             <TextView
                 android:id="@+id/section_title"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="24dp" />
 
-            <!-- Input Fields -->
+
             <EditText
                 android:id="@+id/edit_student_id"
                 android:layout_width="320dp"

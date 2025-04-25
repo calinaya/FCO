@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2EDED"
-    tools:context=".homepage">
+    tools:context=".fco_homepage">
 
     <ScrollView
         android:id="@+id/scrollableContent"
@@ -32,14 +32,15 @@
                     android:src="@drawable/bg1"
                     android:layout_marginTop="-13dp"/>
 
+
                 <View
                     android:layout_width="340dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="2dp"
                     android:background="#090606"
                     android:layout_gravity="center"/>
-            </LinearLayout>
 
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/profileSection"
@@ -103,6 +104,39 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fcoHomeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                android:backgroundTint="#30304A">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnFCOHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏢 FCO Officer Homepage"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#6C63FF"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:drawablePadding="10dp"
+                        android:padding="12dp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/quickAccessTitle"
@@ -225,7 +259,7 @@
                         android:id="@+id/eventPoster2"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"/>
 
                     <TextView
                         android:id="@+id/eventTitle2"
@@ -349,32 +383,32 @@
         android:layout_gravity="center_horizontal">
 
 
-    <ImageView
-        android:id="@+id/home"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/home"
-        app:tint="#FFFFFF"
-        android:layout_marginEnd="20dp"
-        android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/home"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="20dp"
+            android:layout_centerHorizontal="true" />
 
 
-    <ImageView
-        android:id="@+id/attendance"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/attendance"
-        app:tint="#FFFFFF"
-        android:layout_marginEnd="20dp" />
+        <ImageView
+            android:id="@+id/attendance"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/attendance"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="20dp" />
 
 
-    <ImageView
-        android:id="@+id/notif"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/notification"
-        app:tint="#FFFFFF"
-        android:layout_marginEnd="20dp"/>
+        <ImageView
+            android:id="@+id/notif"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/notification"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="20dp"/>
 
         <ImageView
             android:id="@+id/message"
@@ -385,11 +419,11 @@
             android:layout_marginEnd="20dp" />
 
         <ImageView
-        android:id="@+id/profile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/profile"
-        app:tint="#FFFFFF" />
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            app:tint="#FFFFFF" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".message"
+    tools:context=".fcoMessage"
     android:background="@drawable/purple_overlay_gradient">
 
     <ImageView
@@ -35,7 +35,7 @@
             android:background="@drawable/header_background">
 
             <ImageView
-                android:id="@+id/backBtn"
+                android:id="@+id/back_button"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/back1"

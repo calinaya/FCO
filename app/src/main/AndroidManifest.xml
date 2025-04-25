@@ -13,9 +13,46 @@
         android:theme="@style/Theme.FCON"
         tools:targetApi="31">
         <activity
+            android:name=".course_selection"
+            android:exported="false" />
+        <activity
+            android:name=".student_attendance1"
+            android:exported="false" />
+        <activity
+            android:name=".year_level"
+            android:exported="false" />
+        <activity
+            android:name=".fcoMessage"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".fcoProfile"
+            android:exported="false" />
+        <activity
+            android:name=".fcoNotification"
+            android:exported="false" />
+        <activity
+            android:name=".attendance_fines"
+            android:exported="false" />
+        <activity
+            android:name=".fco_officer_homepage"
+            android:exported="false" />
+        <activity
+            android:name=".addEvent"
+            android:exported="false" />
+        <activity
+            android:name=".announce"
+            android:exported="false" />
+        <activity
+            android:name=".feedback"
+            android:exported="false" />
+        <activity
+            android:name=".fco_homepage"
+            android:exported="false" />
+        <activity
             android:name=".message"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".clearance"
             android:exported="false" />
@@ -36,9 +73,6 @@
             android:exported="false" />
         <activity
             android:name=".qr_code"
-            android:exported="false" />
-        <activity
-            android:name=".button_background"
             android:exported="false" />
         <activity
             android:name=".attendance"

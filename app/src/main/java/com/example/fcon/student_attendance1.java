@@ -1,6 +1,7 @@
 package com.example.fcon;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,35 +12,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class prospectus extends AppCompatActivity {
+public class student_attendance1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_prospectus);
+        setContentView(R.layout.activity_student_attendance1);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        ImageView ba = findViewById(R.id.backButton);
+        ImageView back = findViewById(R.id.backButton);
 
-        ba.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ba = new Intent(prospectus.this, homepage.class);
-                startActivity(ba);
+                Intent back = new Intent(student_attendance1.this, year_level.class);
+                startActivity(back);
             }
         });
 
-        ba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(prospectus.this, fco_homepage.class);
-                startActivity(b);
-            }
-        });
     }
 }

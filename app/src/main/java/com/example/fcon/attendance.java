@@ -69,5 +69,13 @@ public class attendance extends AppCompatActivity {
                 startActivity(mess);
             }
         });
+
+        ho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent h = new Intent(attendance.this, fco_homepage.class);
+                startActivity(h);
+            }
+        });
     }
 }

@@ -70,5 +70,13 @@ public class profile extends AppCompatActivity {
                 startActivity(mess);
             }
         });
+
+        hom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent h = new Intent(profile.this, fco_homepage.class);
+                startActivity(h);
+            }
+        });
     }
 }

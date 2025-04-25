@@ -29,7 +29,7 @@ public class pay_fines extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent back = new Intent(pay_fines.this, homepage.class);
+                Intent back = new Intent(pay_fines.this, attendance.class);
                 startActivity(back);
             }
         });

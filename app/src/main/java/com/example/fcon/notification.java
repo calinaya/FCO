@@ -60,5 +60,13 @@ public class notification extends AppCompatActivity {
                 startActivity(mess);
             }
         });
+
+        ho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent h = new Intent(notification.this, fco_homepage.class);
+                startActivity(h);
+            }
+        });
     }
 }

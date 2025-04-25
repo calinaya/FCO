@@ -33,5 +33,13 @@ public class clearance extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(clearance.this, fco_homepage.class);
+                startActivity(b);
+            }
+        });
     }
 }

@@ -11,34 +11,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class prospectus extends AppCompatActivity {
+public class fcoMessage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_prospectus);
+        setContentView(R.layout.activity_fco_message);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        ImageView ba = findViewById(R.id.backButton);
+        ImageView back = findViewById(R.id.back_button);
 
-        ba.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ba = new Intent(prospectus.this, homepage.class);
-                startActivity(ba);
-            }
-        });
-
-        ba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(prospectus.this, fco_homepage.class);
-                startActivity(b);
+                Intent back = new Intent(fcoMessage.this, fco_officer_homepage.class);
+                startActivity(back);
             }
         });
     }

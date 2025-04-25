@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:padding="24dp">
 
-        <!-- Floating Circular Logo -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/logoImage"
             android:layout_width="180dp"
@@ -26,7 +25,7 @@
             android:alpha="0.95"
             app:shapeAppearanceOverlay="@style/CircleImage" />
 
-        <!-- Welcome Text -->
+
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
@@ -50,7 +49,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp" />
 
-        <!-- Glass Login Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="500dp"
@@ -68,7 +66,7 @@
                 android:orientation="vertical"
                 android:padding="28dp">
 
-                <!-- Student ID -->
+
                 <EditText
                     android:id="@+id/etUsername"
                     android:layout_width="match_parent"
@@ -82,7 +80,7 @@
                     android:inputType="textEmailAddress"
                     android:layout_marginBottom="18dp" />
 
-                <!-- Password -->
+
                 <EditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
@@ -105,7 +103,6 @@
                     android:layout_marginTop="-20dp"
                     android:layout_gravity="start" />
 
-                <!-- Login Button -->
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
@@ -117,7 +114,6 @@
                     android:background="@drawable/btn_neon_purple"
                     />
 
-                <!-- Forgot Password -->
                 <TextView
                     android:id="@+id/forgotPassword"
                     android:layout_width="wrap_content"

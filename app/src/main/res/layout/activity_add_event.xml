@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E6F2"
+    android:padding="16dp"
+    tools:context=".addEvent">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/header_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/back1"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="Add Event"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/eventTitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:layout_marginLeft="15dp"
+            android:textColor="#100C0C"
+            android:fontFamily="sans-serif"
+            android:textSize="17dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Event Title"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="#CFC9F5"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/eventDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Event Date"
+            android:textColor="#090707"
+            android:fontFamily="sans-serif"
+            android:textSize="17dp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/eventDate"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Event Date"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="#CFC9F5"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/eventDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Description"
+            android:textColor="#0B0707"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="sans-serif"
+            android:textSize="17dp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/eventDescription"
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:hint="Enter Event Description"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="#CFC9F5"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="top|start" />
+
+        <LinearLayout
+            android:id="@+id/posterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Poster"
+                android:layout_marginLeft="15dp"
+                android:textColor="#090606"
+                android:fontFamily="sans-serif"
+                android:textSize="17dp"
+                android:layout_marginBottom="4dp" />
+
+            <FrameLayout
+                android:id="@+id/posterFrame"
+                android:layout_width="340dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text_bg"
+                android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/attachedPoster"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/add_photo"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnAttachPoster"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Attach Poster"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button_style"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitEvent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Submit Event"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button_style"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

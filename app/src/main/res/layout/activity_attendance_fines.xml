@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple_overlay_gradient"
+    tools:context=".attendance_fines">
+
+  <RelativeLayout
+      android:id="@+id/title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back1"
+        android:contentDescription="Back"
+        android:layout_marginLeft="10dp"
+        app:tint="#FFFFFF"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events Attendance"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@id/backButton" />
+  </RelativeLayout>
+
+  <LinearLayout
+      android:id="@+id/hierarchyContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/title"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/eventCard"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card_bg"
+
+        android:elevation="8dp"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:focusable="true">
+
+      <TextView
+          android:id="@+id/eventTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="👥 Freshmen Orientation"
+          android:textColor="#FFFFFF"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/eventDate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="March 15, 2025"
+          android:textColor="#CCCCCC"
+          android:textSize="14sp"
+          android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+  </LinearLayout>
+</RelativeLayout>

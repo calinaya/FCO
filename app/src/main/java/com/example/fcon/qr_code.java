@@ -33,5 +33,12 @@ public class qr_code extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(qr_code.this, fco_homepage.class);
+            }
+        });
     }
 }

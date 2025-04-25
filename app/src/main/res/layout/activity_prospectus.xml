@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFBFB"
+    android:background="#E8E6F2"
     android:padding="16dp"
     tools:context=".prospectus">
 
@@ -36,16 +36,24 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- PDF Viewer -->
-    <FrameLayout
-        android:id="@+id/pdfContainer"
+    <!-- Shadow Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pdfCard"
         android:layout_width="340dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:background="@drawable/event_card_style"
-        android:elevation="6dp" />
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <FrameLayout
+            android:id="@+id/pdfContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/event_card_style" />
+    </androidx.cardview.widget.CardView>
 
     <!-- Download Button -->
     <Button
